@@ -1,8 +1,8 @@
 FROM ubuntu:bionic
 
-RUN apt update && \
+RUN apt-get update && \
 DEBIAN_FRONTEND=noninteractive \
-apt install -y \
+apt-get install -y \
   make unrar-free autoconf automake libtool gcc g++ gperf \
   flex bison texinfo gawk ncurses-dev libexpat-dev python-dev python python-serial \
   sed git unzip bash help2man wget bzip2 libtool-bin && \
