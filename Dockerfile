@@ -22,8 +22,8 @@ RUN groupadd --gid "${USER_GID}" "${USER}" && \
 
 USER builder
 
-RUN cd / && \
+RUN cd /home/builder && \
   git clone --recursive https://github.com/pfalcon/esp-open-sdk.git data
-WORKDIR /data
+WORKDIR /home/builder/data
 RUN make
 ENV PATH=/data/xtensa-lx106-elf/bin:$PATH
